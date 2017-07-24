@@ -1,6 +1,11 @@
 #!/bin/bash
-arr=(1 3 5)
-for i in ${arr[@]}
-do
-  echo $i
-done
+if [ $# -lt 3 ]; then
+	cat <<- EOM
+	This command requires three arguments;
+	user, userid, and number.
+	EOM
+else
+	echo "user: $1"
+	echo "userid: $2"
+	echo "number: $3"
+fi   

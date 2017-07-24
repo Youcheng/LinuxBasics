@@ -161,4 +161,94 @@ case
       *) echo "no match";;
     esac  
   
-      
+function
+--------
+    function greet {
+      echo "hello"
+      }
+    greet
+    
+    function greet2 {
+      echo "hello, $1"
+      }
+    greet2 name    
+    
+    function printAllArguments {
+      i=1
+      for f in $@; do
+        echo $i : $f
+        ((i+=1))
+      done
+    }     
+    printAllArguments $(ls) 
+    
+    
+work with arguments from cli
+----------------------------
+    $@, an array of arguments
+    $#, number of arguments
+
+    for f in $@; do  
+      echo $i : $f
+      ((i+=1))
+    done  
+    
+work with flags from cli
+------------------------
+    while getopts :u:p:a option; do
+      case $option in
+        u) user=$OPTARG;; # u:
+        p) pass=$OPTARG;; # p:
+        a) echo "got -a flag and no value";; # last a without colon following
+        ?) echo "not sure what $OPTARG means";; # leading colon for any unspecified flag
+      esac
+    done
+    
+    echo "user: $user / pass: $pass" 
+
+get input during execution
+--------------------------
+    echo "your name?"
+    read name
+    
+    echo "your password?"
+    read -s name       #-s silent         
+    
+    read -p "you pet?" animal      #-p write an prompt before input area
+    
+    select option in "cat" "dog" "quit"
+    do
+      case $option in
+        cat) echo "You selected cat";;
+        dog) echo "You selected dog";;
+        quit) break;;
+        *) echo "we don't have this option";;
+      esac
+    done
+
+input validation
+----------------
+    if [ $# -lt 3 ]; then
+            cat <<- EOM
+            This command requires three arguments;
+            user, userid, and number.
+            EOM
+    else
+            echo "user: $1"
+            echo "userid: $2"
+            echo "number: $3"
+    fi    
+    
+    
+    read -p "favorite animal?" a
+    while [[-z "$a"]]; do
+      read -p "pls give an answer" a
+    done
+    echo "favorite animal: $a"  
+    
+    
+    read -p "what year? [yyyy]" a
+    while [[ ! $a =~ [0-9]{4} ]]; do
+      read -p "A year is four digits, [yyyy]" a
+    done
+    echo "input year $a"                        
