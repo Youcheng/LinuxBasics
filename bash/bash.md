@@ -54,4 +54,5 @@ coloring and styling text
     make output more interesting
 ![coloredText](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/coloredText.png)
 ![coloredExample](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/coloredExample.png)
-* echo -e '**\033[34;42m** Color Text **\033[0m**'    (echo with escaping)
+![styledText](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/styledText.png)
+* echo -e '**\033[34;42m** Color Text **\033[0m**'    (echo with escaping, 34-foreground=blue, 42-background=green, m=end)
