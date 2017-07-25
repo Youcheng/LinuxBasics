@@ -49,7 +49,11 @@ reading messages from the kernel
     The RAM buffer though is limited size, so if your system's been up for a while.
     
 virtual file system
--------------------    
+-------------------
+    /proc
+    /sys
+    /dev
+    
     Linux kernel also provides virtual file systems, proc and sys and the lesser-known debugfs, 
     and through those virtual file systems, we can interact directly with the kernel, 
     getting information from the kernel, and changing things in the kernel.
@@ -67,3 +71,5 @@ virtual file system
 kernel tunable variables
 ------------------------
     /proc/sys/*    
+   
+    
