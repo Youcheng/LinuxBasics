@@ -23,7 +23,7 @@ This replaces the first occurrence of the word "old" on each line of the file wi
 - **s** command is quoted in single quotes in case it contains sepecial chars
 - **old** is a regular expression
 - **new** is NOT a regular expression
-- doesn't change the original file
+- doesn't change the original file, -i will change the file in place
 
 sed 's/old/new/g' file
 ----------------------
