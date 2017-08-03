@@ -117,12 +117,12 @@ more sed commands
 **i** command, insert line(s) before sepcified line  
 ------------------------------------------
 
-**i** command, replace specified line with line(s)  
+**c** command, replace specified line with line(s)  
 ------------------------------------------
 ```
-sed '/top/,/again/ c\
-newline1\
-newline2
+sed '/top/,/again/ c\{Enter}
+newline1\{Enter}
+newline2{Enter}
 ' file.txt
 
 subsite lines from the line cointaining top to line containing again
