@@ -69,33 +69,33 @@ more sed commands
 - sed '2,4s/up/UP/' file <- only work on line 2 to 4
 - sed '$s/up/UP/' file <- only work on last line
 
-**p** prints the specified line(s)
+**p** command, prints the specified line(s)
 ------------------------------------
 - sed -n '/down/p' file <- only print lines which match regular expression, down
 - sed -n '/march/,/when/p' file <- file from first line which matches regular expression, march to the first line which matches regular expression, when
 
-**d** deletes the specified line(s)
+**d** command, deletes the specified line(s)
 -------------------------------------
 - sed '/up/!d' file <- delete lines which doesn't contain regular expression, up
 - sed '2,4!d' file <- delete every line except line 2 to 4
 
-**r** reads a file after the specified line
+**r** command, reads a file after the specified line
 ---------------------------------------------
 - sed 'down/r new.txt' file.txt 
 - sed '3r new.txt' file.txt
 - sed '$r new.txt' file.txt . <- end of the line
 
 
-**w** writes the specified line(s) to a file
+**w** command, writes the specified line(s) to a file
 ----------------------------------------------
 - sed '1,3w new.txt' file.txt
 - sed 's/up/UP/gw up.txt' file.txt <- modify lines first and save those files to up.txt
 
-**y** replace each char accordingly
+**y** command, replace each char accordingly
 -----------------------------------
 - sed 'y/abc/ABC' file.txt <- replace a with A, b with B, c with C
 
-**a** append line(s) after sepcified line
+**a** command, append line(s) after sepcified line
 - sed '/down/a\{Enter}
   newline1\{Enter}
   newline2{Enter}
@@ -113,10 +113,10 @@ more sed commands
 ```
   sed -f script file.txt{Enter}
 ```  
-**i** insert line(s) before sepcified line  
+**i** command, insert line(s) before sepcified line  
 ------------------------------------------
 
-**i** replace specified line with line(s)  
+**i** command, replace specified line with line(s)  
 ------------------------------------------
 ```
 sed '/top/,/again/ c\
