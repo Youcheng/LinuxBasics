@@ -96,6 +96,7 @@ more sed commands
 - sed 'y/abc/ABC' file.txt <- replace a with A, b with B, c with C
 
 **a** command, append line(s) after sepcified line
+-------------------------------------------------
 - sed '/down/a\{Enter}
   newline1\{Enter}
   newline2{Enter}
