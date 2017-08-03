@@ -155,4 +155,4 @@ more commands to be used in the script
 - d command, exit current line
 - = command, print the line number which is executed
 - l command, to display the non-printing char unambiguously for the s sommand
-- # is for command
+- \# is for comment out code line
