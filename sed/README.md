@@ -27,7 +27,11 @@ This replaces the first occurrence of the word "old" on each line of the file wi
 
 sed 's/old/new/g' file
 ----------------------
-Affect every occurence on a line.
+Affect every occurence for every line.
+
+sed 's/old/new/3' file
+----------------------
+Affect 3rd occurence on a line.
 
 regular expression
 ------------------
@@ -129,4 +133,26 @@ subsite lines from the line cointaining top to line containing again
 with two lines
 ```
 
+write programs in sed(group more commands in a file to be executed by sed)
+==========================================================================
+sed -f script file.txt
+```
+for lines(2-4) containing when we will do the two substitution
 
+cat > script
+/when/ {
+  2,4 {
+    s/up/UP/g
+    s/down/DOWN/g
+  }  
+}  
+```
+
+more commands to be used in the script
+-------------------------------------
+- n command, getting next line
+- q command, exit the program
+- d command, exit current line
+- = command, print the line number which is executed
+- l command, to display the non-printing char unambiguously for the s sommand
+- # is for command
