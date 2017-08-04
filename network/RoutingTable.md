@@ -45,6 +45,16 @@ how to read routing table
 
     224.0.34.0/24 via 172.17.49.73 dev eth4
     Destination(224.0.34.0/24) <-> Router(172.17.49.73) <-> NetworkInterface(eth4)
+
+    Explanation of 224.0.34.0/24
+    It repsents a set of IPs from a network.
+    224.0.34.0 -> binary format 11100000.00000000.00100010.00000000
+
+    Network ID:
+        the first 24 digits, where is 11100000.00000000.00100010
+    The set of IPs:
+        which are [11100000.00000000.00100010.00000000, 11100000.00000000.00100010.11111111]
+        in decimal formats, [224.0.34.0, 224.0.34.255]
 ```
 
 
