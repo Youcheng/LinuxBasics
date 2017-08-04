@@ -28,7 +28,7 @@ VNC(Virtual Network Computing)
  which updates the client's view of the desktop.
 ```
 
-- server-client
+- server-client structure
 
 ![VNCServerClient](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/VNCServerClient.png)
 
