@@ -51,7 +51,7 @@ how to read routing table
     224.0.34.0 -> binary format 11100000.00000000.00100010.00000000
 
     Network ID:
-        the first 24 digits, where is 11100000.00000000.00100010
+        the first 24 digits, where is 11100000.00000000.00100010, decimal format, 224.0.34
     The set of IPs:
         which are [11100000.00000000.00100010.00000000, 11100000.00000000.00100010.11111111]
         in decimal formats, [224.0.34.0, 224.0.34.255]
