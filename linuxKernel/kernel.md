@@ -40,7 +40,7 @@ system call
     // the systemcall is in the section 2 of man page
     [09:24 PM root@cr-pvg-dev002 include ]# man 2 read
     
-![applicationKernel](https://github.com/Youcheng/ServerTuning/blob/master/LinuxBasics/pictures/applicationKernel.png)
+![applicationKernel](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/applicationKernel.png)
         
 reading messages from the kernel
 --------------------------------
