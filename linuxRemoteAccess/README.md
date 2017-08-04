@@ -29,7 +29,7 @@ VNC(Virtual Network Computing)
 ```
 
 - server-client
-![VNCServerClient](https://github.com/Youcheng/ServerTuning/blob/master/LinuxBasics/pictures/VNCServerClient.png)
+![VNCServerClient](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/VNCServerClient.png)
 
 - softwares on server side
     VNC Server
@@ -77,5 +77,5 @@ VNC(Virtual Network Computing)
 #2
 10.31.30.5:5901
 ```
-![vncviewer](https://github.com/Youcheng/ServerTuning/blob/master/LinuxBasics/pictures/vncviewer.png)
+![vncviewer](https://github.com/YouchengYoucheng/LinuxBasics/blob/master/pictures/pictures/vncviewer.png)
 
