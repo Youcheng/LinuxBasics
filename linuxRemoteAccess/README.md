@@ -70,6 +70,7 @@ VNC(Virtual Network Computing)
 - softwares on client side<br>
     VNC Viewer<br>
     - [RealVNC](https://www.realvnc.com/en/download/vnc/)
+    - configuration
 
 ```
     #1 run vncviewer from the command line
