@@ -1,3 +1,8 @@
+what is a routing table
+-----------------------
+It defines a set of rules,
+and each rules tells how a packet is transmitted from from the remote destination to a localhost.
+
 how to read routing table
 -------------------------
 
