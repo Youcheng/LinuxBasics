@@ -75,7 +75,7 @@ VNC(Virtual Network Computing)
 ./vncviewer
 
 #2
-10.31.30.5:5901
+for example, fill 10.31.30.5:5901 for VNC Server in following picture
 ```
 ![vncviewer](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/vncviewer.png)
 
