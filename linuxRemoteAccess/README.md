@@ -29,6 +29,7 @@ VNC(Virtual Network Computing)
 ```
 
 - server-client
+
 ![VNCServerClient](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/VNCServerClient.png)
 
 - softwares on server side
