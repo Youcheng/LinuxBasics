@@ -89,7 +89,19 @@ output field/record seperator
 -----------------------------
     default output field seperator is a single space, default output record seperator is a new line
     It can be customized as, awk 'BEGIN{OFS=", ";ORS="!"} {print $2, $1}'
-    
+
+
+formatting output with width and precision specifiers
+-----------------------------------------------------
+- printf(format, value...), like printf("%s\t%s\t%d\n", $1, $2, $3), where \t is tab, \n is new line
+- printf("%-20s %-30s %-3d %6.2f d\n", $1, $2, $3, $4), 
+  where -20, -30, -3 is the width specifier and each field is aligned to the left due to negative sign,
+  s, string
+  d, integer
+  f, floating number
+  6.2, the field has a width of 6 where 2 of them is for fractional part
+
+
 operators
 ---------
     +, -, *, /, %, ^
@@ -164,7 +176,8 @@ cat > script.awk
 }
 ````
 
-
+functions
+=========
 string manipulation function
 ----------------------------
 - length([string]), if empty, it means $0(entire line)
@@ -190,9 +203,55 @@ BEGIN {
 - split(string, array[,regexp]), split string into pieces which are saved in array, using regexp as the seperator
 ```
 
+math functions
+--------------
+- int(x), int(3.9)->3
+- rand(), return a value in \[0, 1\), for example int(ran()*6)+1-> randomly return an integer in \[1,2,3,4,5,6\]
+- srand(\[x\]), seed of the rand function
+- sqrt(x)
+- sin(x)
+- cos(x)
+- log(x)
+- exp(x)
 
+associative array
+-----------------
+the key of the array could be anything, like a\["first"\] = $1
 
-    
+for-in statement
+```
+# example 1
+# the order is not guaranteed in the for loop
+# convert every field into lower case and find out the number of occurrences of each lowcased field
+{
+        for ( i=1; i<=NF; i++ ) {
+                words[tolower($i)]++;
+        }
+}
+END {
+        for ( i in words ) {
+                print i, words[i];
+        }
+}
 
+# example 2
+# transpose a table
+{
+        for ( i=1; i<=NF; i++ ) {
+                a[NR ":" i] = $i;
+        }
+        if ( NF > maxNF ) {
+                maxNF = NF;
+        }
+}
+END {
+        for ( field=1; field<=maxNF; field++ ) {
+                for ( rec=1; rec<=NR; rec++ ) {
+                        printf ( "%-10s", a[rec ":" field] );
+                }
+                printf("\n");
+        }
+}
+```
 
   
