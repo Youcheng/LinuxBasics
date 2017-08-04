@@ -32,9 +32,9 @@ VNC(Virtual Network Computing)
 
 ![VNCServerClient](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/VNCServerClient.png)
 
-- softwares on server side
-    VNC Server
-    - [TigerVNC](http://tigervnc.org/)
+- softwares on server side<br>
+    VNC Server<br>
+    - [TigerVNC](http://tigervnc.org/)<br>
     yum install tigervnc-server
     - configuration
 ```
@@ -67,8 +67,8 @@ VNC(Virtual Network Computing)
        for each user. We need one vnc server configuration file per user login.
 ```
 
-- softwares on client side
-    VNC Viewer
+- softwares on client side<br>
+    VNC Viewer<br>
     - [RealVNC](https://www.realvnc.com/en/download/vnc/)
 
 ```
