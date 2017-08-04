@@ -58,8 +58,8 @@ how to read routing table
 ```
 
 
-how to add a static routing path
---------------------------------
+how to add/delete a static routing path
+---------------------------------------
 ```
 command to add
     [05:40 AM root@localhost sed ]# ip route add 195.188.199.0/24 dev virbr0
