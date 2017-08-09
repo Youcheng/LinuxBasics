@@ -10,8 +10,12 @@ move traffic between networks
 
 vlan-enabled switch
 -------------------
+```
+there is a only one default vlan on a new switch until more vlans are configured
+```
+
 - top switch
-  - port 1, vlan 10
+  - port 1, vlan 10, each port has to be on a specific vlan
   - port 2, vlan 20
 - trunk link
   a physical cable to carry all vlan traffic between switches
@@ -24,9 +28,6 @@ vlan-enabled switch
 
 
 
-
-
-
-IEEE 802.1q protocl
--------------------
-truncing protocol which allows vlan information to be shared between switches
+IEEE 802.1q protocol
+--------------------
+trunking protocol which allows vlan information to be shared between switches
