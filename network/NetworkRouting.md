@@ -18,7 +18,8 @@ vlan-enabled switch
 - bottom switch
   - port 1
   - port 2, vlan 10
-  - port 3, vlan 20 . 
+  - port 3, vlan 20
+  
 ![VLAN-across-switches](https://github.com/Youcheng/LinuxBasics/blob/master/pictures/VLAN-across-switches.png)
 
 
