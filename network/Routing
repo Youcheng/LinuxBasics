@@ -1,0 +1,20 @@
+Vlan
+----
+virutal local area network
+OSI-model layer 2
+
+
+
+vlan-enabled switch
+-------------------
+VLAN-across-switches.png
+
+
+router
+------
+move traffic between networks
+
+
+IEEE 802.1q protocl
+-------------------
+truncing protocol which allows vlan information to be shared between switches
